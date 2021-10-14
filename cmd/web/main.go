@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/kasuki2/bookings/pkg/handlers"
-	"github.com/kasuki2/bookings/pkg/config"
-	"github.com/kasuki2/bookings/pkg/render"
+	"github.com/kasuki2/bookings/internal/handlers"
+	"github.com/kasuki2/bookings/internal/config"
+	"github.com/kasuki2/bookings/internal/render"
 	"github.com/alexedwards/scs/v2"
 	"fmt"
 	"net/http"
