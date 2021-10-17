@@ -1,0 +1,10 @@
+mode: set
+github.com/kasuki2/bookings/cmd/web/main.go:20.13,24.16 2 0
+github.com/kasuki2/bookings/cmd/web/main.go:33.2,42.16 4 0
+github.com/kasuki2/bookings/cmd/web/main.go:24.16,26.3 1 0
+github.com/kasuki2/bookings/cmd/web/main.go:48.18,67.17 10 1
+github.com/kasuki2/bookings/cmd/web/main.go:72.3,80.12 6 1
+github.com/kasuki2/bookings/cmd/web/main.go:67.17,70.4 2 0
+github.com/kasuki2/bookings/cmd/web/middleware.go:12.45,23.2 3 1
+github.com/kasuki2/bookings/cmd/web/middleware.go:25.50,27.2 1 1
+github.com/kasuki2/bookings/cmd/web/routes.go:11.49,43.2 18 1

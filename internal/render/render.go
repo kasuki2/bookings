@@ -22,10 +22,14 @@ var functions = template.FuncMap{
 func NewTemplates(a *config.AppConfig){
 	app = a
 }
-
+// td template data 
 func AddDefaultData(td *models.TemplateData, r *http.Request) *models.TemplateData {
+	
+	td.Flash = app.Session.PopString(r.Context(), "flash")
+	td.Error = app.Session.PopString(r.Context(), "error")
+	td.Warning = app.Session.PopString(r.Context(), "warning")
 	td.CSRFToken = nosurf.Token(r)
-		return td
+	return td
 }
 
 func RenderTemplate(w http.ResponseWriter, r *http.Request, tmpl string, td *models.TemplateData) {

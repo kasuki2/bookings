@@ -120,12 +120,24 @@ let attention = Prompt();
 
   function notifyModal(title, text, icon, confirmationButtonText){
     Swal.fire({
-  title: title,
-  html: text,
-  icon: icon,
-  confirmButtonText: confirmationButtonText
-})
+    title: title,
+    html: text,
+    icon: icon,
+    confirmButtonText: confirmationButtonText
+    })
   }
+
+  {{with .Error}}
+  notify("{{.}}", "error");
+  {{end}}
+
+  {{with .Flash}}
+  notify("{{.}}", "success");
+  {{end}}
+
+  {{with .Warning}}
+  notify("{{.}}", "warning");
+  {{end}}
 
   function Prompt(){
     let toast = function(c){
