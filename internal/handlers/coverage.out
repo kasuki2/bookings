@@ -1,0 +1,22 @@
+mode: set
+github.com/kasuki2/bookings/internal/handlers/handlers.go:25.47,29.2 1 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:32.33,34.2 1 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:37.67,44.2 3 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:47.68,58.2 5 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:60.73,68.2 4 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:70.77,72.16 2 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:77.2,91.19 6 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:107.2,109.66 2 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:72.16,75.3 2 0
+github.com/kasuki2/bookings/internal/handlers/handlers.go:91.19,102.3 4 0
+github.com/kasuki2/bookings/internal/handlers/handlers.go:117.70,119.2 1 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:120.68,122.2 1 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:124.74,126.2 1 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:128.78,133.2 3 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:139.82,146.16 3 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:150.2,151.14 2 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:146.16,148.3 1 0
+github.com/kasuki2/bookings/internal/handlers/handlers.go:154.69,156.2 1 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:158.80,162.9 2 1
+github.com/kasuki2/bookings/internal/handlers/handlers.go:169.2,175.4 4 0
+github.com/kasuki2/bookings/internal/handlers/handlers.go:162.9,167.3 4 1

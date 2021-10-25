@@ -5,16 +5,20 @@ import (
 	"github.com/kasuki2/bookings/internal/config"
 	"github.com/kasuki2/bookings/internal/render"
 	"github.com/kasuki2/bookings/internal/models"
+	"github.com/kasuki2/bookings/internal/helpers"
 	"github.com/alexedwards/scs/v2"
 	"fmt"
 	"net/http"
 	"log"
 	"time"
 	"encoding/gob"
+	"os"
 )
 const portNumber = ":8089"
 var app config.AppConfig
 var session *scs.SessionManager
+var infoLog *log.Logger
+var errorLog *log.Logger
 
 
 func main() {
@@ -38,7 +42,7 @@ func main() {
 		tc, err := render.CreateTemplateCache()
 		if err != nil {
 			log.Fatal("cannot create template cache")
-			return err
+			//return err
 		}
 	
 		app.TemplateCache = tc
@@ -73,14 +77,23 @@ func main() {
 
 func run() error {
 
-		// change this to true when in production
-		app.InProduction = false
+		
 
 		// what is in the session? primitives are okay
 		// other types have to be told to session
 	
 		gob.Register(models.Reservation{})
-	
+
+		// change this to true when in production
+		app.InProduction = false
+
+		infoLog = log.New(os.Stdout, "INFO\t", log.Ldate|log.Ltime)
+		app.InfoLog = infoLog
+
+		errorLog = log.New(os.Stdout, "ERROR\t", log.Ldate|log.Ltime|log.Lshortfile)
+		app.ErrorLog = errorLog
+
+
 		session = scs.New()
 		session.Lifetime = 24 * time.Hour
 		session.Cookie.Persist = true
@@ -102,6 +115,7 @@ func run() error {
 		handlers.NewHandlers(repo)
 	
 		render.NewTemplates(&app)
+		helpers.NewHelpers(&app)
 
 	return nil
 }
